@@ -9,7 +9,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.3.1'
+        classpath 'com.android.tools.build:gradle:8.5.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
@@ -27,7 +27,7 @@ apply plugin: 'kotlin-android'
 
 def DEFAULT_PLAY_SERVICES_LOCATION_VERSION = "21.3.0"
 def DEFAULT_EXIF_INTERFACE_VERSION = "1.4.0"
-def DEFAULT_COMPILE_SDK_VERSION = 33
+def DEFAULT_COMPILE_SDK_VERSION = 36
 def DEFAULT_MIN_SDK_VERSION = 21
 def DEFAULT_MEDIA_VERSION = "1.7.0"
 
@@ -97,12 +97,13 @@ def compatibleVersion(prop, fallbackVersion, min = null, max = null) {
 }
 
 android {
-    compileSdkVersion 34
+    compileSdkVersion 36
     namespace 'io.apparence.camerawesome'
 
     defaultConfig {
-        minSdkVersion 24
-        targetSdk = 34
+        minSdkVersion 23
+        targetSdk = 36
+        ndkVersion "28.2.13676358"
     }
     lintOptions {
         disable 'InvalidPackage'
